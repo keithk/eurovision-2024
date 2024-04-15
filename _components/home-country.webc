@@ -41,13 +41,23 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     z-index: 1;
   }
 
   .content {
     position: relative;
     z-index: 2;
+    display: flex;
+    gap: var(--size-4);
+  }
+
+  .avatar {
+    border-radius: var(--radius-blob-4);
+    width: var(--size-12);
+    height: var(--size-12);
+    background-image: var(--bg);
+    background-size: cover;
   }
 </style>
 
@@ -60,9 +70,15 @@
   <section :style="backgroundImageStyle(country.artistImage)">
     <div class="overlay"></div>
     <div class="content">
-      <h3 @text="country.artistName"></h3>
-      <p @text="country.artistDescription"></p>
-      <youtube-video controls :src="country.songEmbedUrl"></youtube-video>
+      <div
+        class="avatar"
+        :style="backgroundImageStyle(country.artistImage)"
+      ></div>
+      <div>
+        <h3 @text="country.artistName"></h3>
+        <p @text="country.artistDescription"></p>
+      </div>
     </div>
+    <youtube-video controls :src="country.songEmbedUrl"></youtube-video>
   </section>
 </div>
