@@ -29,7 +29,7 @@
     const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
     // Generate the star rating HTML with ARIA attributes
-    let html = `<span role="img" aria-label="${numberScore} out of 5 stars">`;
+    let html = ``;
     for (let i = 0; i < fullStars; i++) {
       html += "<span>●</span>";
     }
@@ -39,10 +39,15 @@
     for (let i = 0; i < emptyStars; i++) {
       html += "<span>○</span>";
     }
-    html += "</span>";
 
     return html;
   }
 </script>
 
-<p webc:if="score" class="rating" @html="generateScore(score)"></p>
+<span
+  webc:if="score"
+  class="rating"
+  @html="generateScore(score)"
+  role="img"
+  aria-label=" out of 5 stars"
+></span>

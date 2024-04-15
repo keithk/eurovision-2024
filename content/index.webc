@@ -4,19 +4,14 @@
 
 <style webc:scoped>
   :host {
-    list-style: none;
     display: flex;
     flex-direction: column;
     gap: var(--size-2);
   }
-  li {
-    list-style-type: none;
-    padding: 0;
-  }
 </style>
 
-<ul>
-  <li webc:for="(index, country) in countries">
+<div>
+  <div webc:for="(index, country) in countries">
     <home-country @code="index"></home-country>
-  </li>
-</ul>
+  </div>
+</div>

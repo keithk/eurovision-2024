@@ -1,24 +1,25 @@
 <script webc:setup>
   let artist, song;
   const country = countries[code];
+  const backgroundImageStyle = (image) => `--bg: url('${image}')`;
 </script>
 
 <style webc:scoped>
   :host {
-    padding: 5px;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
-    width: var(--size-content-3);
+    width: 100%;
   }
 
-  header {
+  .header {
     display: flex;
     align-items: center;
     gap: var(--size-2);
+    padding: var(--size-1);
   }
 
-  header span {
+  .header span {
     font-size: var(--font-size-6);
   }
 
@@ -26,15 +27,42 @@
     width: 100%;
     height: 300px;
   }
+
+  section {
+    position: relative;
+    background-image: var(--bg);
+    background-size: cover;
+    padding: var(--size-3);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+  }
 </style>
 
 <div webc:root>
-  <header>
+  <div class="header">
     <span @text="country.countryFlag"></span>
     <h2 @text="country.country"></h2>
-  </header>
-  <h3 @text="country.artistName"></h3>
-  <p @text="country.artistDescription"></p>
-  <country-score :score="country.score"></country-score>
-  <youtube-video controls :src="country.songEmbedUrl"></youtube-video>
+    <country-score :score="country.score"></country-score>
+  </div>
+  <section :style="backgroundImageStyle(country.artistImage)">
+    <div class="overlay"></div>
+    <div class="content">
+      <h3 @text="country.artistName"></h3>
+      <p @text="country.artistDescription"></p>
+      <youtube-video controls :src="country.songEmbedUrl"></youtube-video>
+    </div>
+  </section>
 </div>
