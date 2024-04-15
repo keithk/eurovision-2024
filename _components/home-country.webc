@@ -1,0 +1,24 @@
+<script webc:setup>
+  let artist, song;
+  const country = countries[code];
+</script>
+
+<style webc:scoped>
+  :host {
+    padding: 5px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+  }
+
+  youtube-video {
+    width: 100%;
+    height: 300px;
+  }
+</style>
+
+<div webc:root>
+  <h2 @text="country.artistName"></h2>
+  <p @text="country.artistDescription"></p>
+  <youtube-video controls :src="country.songEmbedUrl"></youtube-video>
+</div>

@@ -1,0 +1,34 @@
+{
+  "name": "keith-eurovision-2024",
+  "version": "1.0.0",
+  "description": "A minimalist bare-bones starter project using Eleventy and WebC.",
+  "type": "module",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve --quiet --incremental",
+    "clean": "rm -rf _site",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/11ty/eleventy-base-webc.git"
+  },
+  "author": {
+    "name": "Keith Kurson",
+    "email": "hi@keithkurson.net",
+    "url": "https://keith.is/"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://eurovision-2024.keith.is",
+  "devDependencies": {
+    "@11ty/eleventy": "3.0.0-alpha.5",
+    "@11ty/eleventy-plugin-webc": "^0.11.2"
+  },
+  "dependencies": {
+    "@11ty/is-land": "^4.0.0"
+  }
+}
