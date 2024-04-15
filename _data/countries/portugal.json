@@ -1,10 +1,12 @@
 {
   "country": "Portugal",
   "countryCode": "PORTUGAL",
+  "countryFlag": "🇵🇹",
   "url": "https://eurovision.tv/participant/iolanda-2024",
   "artistName": "iolanda",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/FOTO_OFICIAL_iolanda.JPG?h=c8a50520&itok=reDJ-FSw",
   "artistDescription": "A promising singer and songwriter, iolanda released her debut EP 'Cura' in March 2023.",
   "songName": "Grito",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=K5wDGhcDSpQ"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=K5wDGhcDSpQ",
+  "score": 0
 }

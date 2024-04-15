@@ -1,10 +1,12 @@
 {
   "country": "Georgia",
   "countryCode": "GEORGIA",
+  "countryFlag": "🇬🇪",
   "url": "https://eurovision.tv/participant/nutsa-buzaladze-2024",
   "artistName": "Nutsa Buzaladze",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/41e382f4-2859-4faa-9e12-11d4d8788db2.jpg?itok=9qNtIC6P",
   "artistDescription": "This international songstress from Tbilisi has participated in (and won) many different song contests over her career.",
   "songName": "Firefighter",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=blMwY8Jabyk"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=blMwY8Jabyk",
+  "score": 0
 }

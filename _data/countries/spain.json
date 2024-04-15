@@ -1,10 +1,12 @@
 {
   "country": "Spain",
   "countryCode": "SPAIN",
+  "countryFlag": "🇪🇸",
   "url": "https://eurovision.tv/participant/nebulossa-2024",
   "artistName": "Nebulossa",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-02/nebu.jpeg?h=d0dc23f7&itok=asuSTw0v",
   "artistDescription": "This synth-pop duo from Alicante features Mery Bas providing vocals and Mark Dasousa on synths.",
   "songName": "ZORRA",
-  "songEmbedUrl": "https://youtu.be/LJFpexlj9Bs"
+  "songEmbedUrl": "https://youtu.be/LJFpexlj9Bs",
+  "score": 0
 }

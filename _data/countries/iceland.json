@@ -1,10 +1,12 @@
 {
   "country": "Iceland",
   "countryCode": "ICELAND",
+  "countryFlag": "🇮🇸",
   "url": "https://eurovision.tv/participant/hera-bjork-2024",
   "artistName": "Hera Björk",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/Hera.jpg?h=e46b2392&itok=DZLIJITR",
   "artistDescription": "The Queen is back!",
   "songName": "Scared of Heights",
-  "songEmbedUrl": "https://youtu.be/OouUsCZ3xkM"
+  "songEmbedUrl": "https://youtu.be/OouUsCZ3xkM",
+  "score": 0
 }

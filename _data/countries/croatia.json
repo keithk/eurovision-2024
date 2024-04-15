@@ -1,10 +1,12 @@
 {
   "country": "Croatia",
   "countryCode": "CROATIA",
+  "countryFlag": "🇭🇷",
   "url": "https://eurovision.tv/participant/baby-lasagna-2024",
   "artistName": "Baby Lasagna",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-04/a2363ecf-8c36-4d9a-a7de-4cfe2b480bb4.jpeg?h=b6583d8e&itok=3OBHUYlS",
   "artistDescription": "Baby Lasagna is a project created by singer-songwriter Marko Purišić in order to compose the kind of songs he wanted to release.",
   "songName": "Rim Tim Tagi Dim",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=xTBrVNZtnys"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=xTBrVNZtnys",
+  "score": 0
 }

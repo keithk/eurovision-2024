@@ -1,10 +1,12 @@
 {
   "country": "Cyprus",
   "countryCode": "CYPRUS",
+  "countryFlag": "🇨🇾",
   "url": "https://eurovision.tv/participant/silia-kapsis-2024",
   "artistName": "Silia Kapsis",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/e97581ab-3bf1-4df9-a329-c1af528799d4.jpeg?h=1542410e&itok=uzbE_u33",
   "artistDescription": "Silia is a singer of Cypriot and Greek descent, born and raised in Sydney, Australia, who has already made waves across the entertainment industry.",
   "songName": "Liar",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=8q5QozrtEPA"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=8q5QozrtEPA",
+  "score": 0
 }

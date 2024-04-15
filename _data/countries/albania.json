@@ -1,10 +1,12 @@
 {
   "country": "Albania",
   "countryCode": "ALBANIA",
+  "countryFlag": "🇦🇱",
   "url": "https://eurovision.tv/participant/besa-2024",
   "artistName": "BESA",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/4ac43501-b970-4809-a30b-73eaeb93f3f5.jpeg?h=f09d2c50&itok=YOBCK6Ba",
   "artistDescription": "Besa Kokëdhima was born in Fier, Albania to mathematician parents, who encouraged her to develop her artistry from a very early age.",
   "songName": "TITAN",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=nrjFhjpm7D8"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=nrjFhjpm7D8",
+  "score": 0
 }

@@ -1,16 +1,19 @@
 import cheerio from "cheerio";
 import fs from "fs";
 import path from "path";
+import { flag, code, name, countries } from "country-emoji";
 
 interface Entry {
   country: string;
   countryCode: string;
+  countryFlag: string;
   url: string;
   artistName: string;
   artistImage: string;
   artistDescription: string;
   songName: string;
   songEmbedUrl: string;
+  score: number;
 }
 
 async function fetchHtml(url: string): Promise<string> {
@@ -35,6 +38,7 @@ async function scrapeEurovision2024() {
       const country = countryElement.find("span:last-child").text().trim();
       const countryCode =
         countryElement.attr("href")?.split("/").pop()?.toUpperCase() || "";
+      const countryFlag = flag(countryCode);
       const url = baseUrl + $entry.find(".watch-item__title a").attr("href");
       const artistName = $entry.find(".watch-item__title a span").text().trim();
       const songName = $entry.find(".watch-item__subtitle").text().trim();
@@ -52,12 +56,14 @@ async function scrapeEurovision2024() {
       const entry: Entry = {
         country,
         countryCode,
+        countryFlag,
         url,
         artistName,
         artistImage,
         artistDescription,
         songName,
-        songEmbedUrl
+        songEmbedUrl,
+        score: 0
       };
 
       entries.push(entry);

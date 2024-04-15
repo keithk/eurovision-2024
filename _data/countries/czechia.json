@@ -1,10 +1,12 @@
 {
   "country": "Czechia",
   "countryCode": "CZECHIA",
+  "countryFlag": "🇨🇿",
   "url": "https://eurovision.tv/participant/aiko-2024",
   "artistName": "Aiko",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2023-11/Aiko_Teki%20Shine2_0.jpg?h=09ea0f49&itok=AIo2AtWQ",
   "artistDescription": "Aiko, currently based in Brighton, is a visionary artist who delves into profound themes such as love, solitude and self-understanding, using her music as a medium for introspection and connection.",
   "songName": "Pedestal",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=_iTcX6NlAqA"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=_iTcX6NlAqA",
+  "score": 0
 }

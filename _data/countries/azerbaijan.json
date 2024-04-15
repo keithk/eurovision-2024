@@ -1,10 +1,12 @@
 {
   "country": "Azerbaijan",
   "countryCode": "AZERBAIJAN",
+  "countryFlag": "🇦🇿",
   "url": "https://eurovision.tv/participant/fahree-ilkin-dovlatov-2024",
   "artistName": "FAHREE feat. Ilkin Dovlatov",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-04/c12c265d-7fe5-479b-bb4a-c7d2760fca69_0.jpeg?itok=TqcF3pz8",
   "artistDescription": "FAHREE was born in Baku in 1995 and was brought up in a very artistic family; his father was a passionate jazz drummer, while his grandfather was a respected actor.",
   "songName": "Özünlə Apar",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=NNhAk4rVgNc"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=NNhAk4rVgNc",
+  "score": 0
 }

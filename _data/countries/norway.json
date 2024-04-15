@@ -1,10 +1,12 @@
 {
   "country": "Norway",
   "countryCode": "NORWAY",
+  "countryFlag": "🇳🇴",
   "url": "https://eurovision.tv/participant/gate-2024",
   "artistName": "Gåte",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-04/Ole_Ekker_G%C3%A5te_DSCF8863.jpg?h=3613bba3&itok=0U0tx5S8",
   "artistDescription": "Gåte had their breakthrough at the start of the 2000s and quickly went on to become something of a national treasure in Norway.",
   "songName": "Ulveham",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=UipzszlJwRQ"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=UipzszlJwRQ",
+  "score": 0
 }

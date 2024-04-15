@@ -1,10 +1,12 @@
 {
   "country": "Finland",
   "countryCode": "FINLAND",
+  "countryFlag": "🇫🇮",
   "url": "https://eurovision.tv/participant/windows95man-2024",
   "artistName": "Windows95man",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-04/Kopio_%20Pepino_1_Kredit_Nelli_Kentt%C3%A4_pixelated.jpg?h=5ce4e430&itok=iQURNYb8",
   "artistDescription": "Windows95man is a well-known entertainer, dancer and sought-after model, widely appreciated in Finland and throughout the world.",
   "songName": "No Rules!",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=8Wi7fhswoBA"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=8Wi7fhswoBA",
+  "score": 0
 }

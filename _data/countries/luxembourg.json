@@ -1,10 +1,12 @@
 {
   "country": "Luxembourg",
   "countryCode": "LUXEMBOURG",
+  "countryFlag": "🇱🇺",
   "url": "https://eurovision.tv/participant/tali-2024",
   "artistName": "TALI",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/b3257b21-dd6d-4797-a69b-e7bde206db55.jpeg?h=118ab824&itok=Sfpd6ZmU",
   "artistDescription": "TALI is a performer, vocal coach, music teacher and Luxembourg’s first Eurovision Song Contest participant in over 30 years!",
   "songName": "Fighter",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=6CNuXpdyYmE"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=6CNuXpdyYmE",
+  "score": 0
 }

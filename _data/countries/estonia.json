@@ -1,10 +1,12 @@
 {
   "country": "Estonia",
   "countryCode": "ESTONIA",
+  "countryFlag": "🇪🇪",
   "url": "https://eurovision.tv/participant/5miinust-and-puuluup-2024",
   "artistName": "5MIINUST x Puuluup",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/d460e990-c3c7-44bb-96d3-02118f6dcb7d.jpg?h=19e20f85&itok=D8rwTSML",
   "artistDescription": "The pairing of 5MIINUST x Puuluup is a wildly eclectic collaboration.",
   "songName": "(nendest) narkootikumidest ei tea me (küll) midagi",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=zY6RbPaTNUc"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=zY6RbPaTNUc",
+  "score": 0
 }

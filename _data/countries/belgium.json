@@ -1,10 +1,12 @@
 {
   "country": "Belgium",
   "countryCode": "BELGIUM",
+  "countryFlag": "🇧🇪",
   "url": "https://eurovision.tv/participant/mustii-2024",
   "artistName": "Mustii",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2023-08/230826_EUROVISION%20MUSTII_VLADVDK_0001.jpg?h=1665a6cb&itok=yYQ--nXg",
   "artistDescription": "With two successful albums under his belt, this flamboyant performer is no stranger to Belgian audiences.",
   "songName": "Before the Party's Over",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=WCe9zrWEFNc"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=WCe9zrWEFNc",
+  "score": 0
 }

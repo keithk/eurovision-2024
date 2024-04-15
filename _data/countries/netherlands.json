@@ -1,10 +1,12 @@
 {
   "country": "Netherlands",
   "countryCode": "THE-NETHERLANDS",
+  "countryFlag": "🇳🇱",
   "url": "https://eurovision.tv/participant/joost-klein-2024",
   "artistName": "Joost Klein",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/1.2_1.jpg?h=9276f3b9&itok=TWcPhJNq",
   "artistDescription": "Joost Klein is a musician, writer and artist from Leeuwarden, whose energetic style combines elements from mainstream pop with happy hardcore and pop punk.",
   "songName": "Europapa",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=gT2wY0DjYGo"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=gT2wY0DjYGo",
+  "score": 0
 }

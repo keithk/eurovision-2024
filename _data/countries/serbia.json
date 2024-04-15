@@ -1,10 +1,12 @@
 {
   "country": "Serbia",
   "countryCode": "SERBIA",
+  "countryFlag": "🇷🇸",
   "url": "https://eurovision.tv/participant/teya-dora-2024",
   "artistName": "TEYA DORA",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/42855f59-20e9-4c94-93e4-085a74e66015.png?itok=HPV4QBWV",
   "artistDescription": "By blending modern pop with traditional Balkan influences and heartfelt lyrics, TEYA’s music has resonated with millions globally.",
   "songName": "RAMONDA",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=tJyBVRBiyKA"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=tJyBVRBiyKA",
+  "score": 0
 }

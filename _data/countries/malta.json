@@ -1,10 +1,12 @@
 {
   "country": "Malta",
   "countryCode": "MALTA",
+  "countryFlag": "🇲🇹",
   "url": "https://eurovision.tv/participant/sarah-bonnici-2024",
   "artistName": "Sarah Bonnici",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/sarahbonnici2024.jpg?h=d815c354&itok=d6VzuMWn",
   "artistDescription": "Growing up in a highly musical family, Sarah’s passion for the arts was discovered at a very young age.",
   "songName": "Loop",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=l6eS60n4wg8"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=l6eS60n4wg8",
+  "score": 0
 }

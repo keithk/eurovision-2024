@@ -1,10 +1,12 @@
 {
   "country": "Ireland",
   "countryCode": "IRELAND",
+  "countryFlag": "🇮🇪",
   "url": "https://eurovision.tv/participant/bambie-thug-2024",
   "artistName": "Bambie Thug",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/c0408b44-073e-4df1-adbe-ebe30b042110.jpg?itok=L8Rx6mHa",
   "artistDescription": "Cork-born alt disruptor Bambie Thug is smashing through gender and socio-political stereotypes to create an era-defining sound that borders on elements of pop, rock, electronic and more.",
   "songName": "Doomsday Blue",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=ZGRXRrlIspY"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=ZGRXRrlIspY",
+  "score": 0
 }

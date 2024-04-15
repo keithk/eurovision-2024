@@ -1,10 +1,12 @@
 {
   "country": "Ukraine",
   "countryCode": "UKRAINE",
+  "countryFlag": "🇺🇦",
   "url": "https://eurovision.tv/participant/alyona-alyona-and-jerry-heil-2024",
   "artistName": "alyona alyona & Jerry Heil",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-04/85467096-d8bf-45a4-96c4-5dceea4c7def.jpg?h=d2f54b53&itok=7uaH32i3",
   "artistDescription": "Ukraine’s song for 2024 is a collaboration between two of the country’s most successful artists.",
   "songName": "Teresa & Maria",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=k_8cNbF8FLI"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=k_8cNbF8FLI",
+  "score": 0
 }

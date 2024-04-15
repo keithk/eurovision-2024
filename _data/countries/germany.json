@@ -1,10 +1,12 @@
 {
   "country": "Germany",
   "countryCode": "GERMANY",
+  "countryFlag": "🇩🇪",
   "url": "https://eurovision.tv/participant/isaak-2024",
   "artistName": "ISAAK",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-03/d92b4070-0922-4039-8d1e-cbec04048fe5.jpg?h=dada8a0b&itok=Du1q04C_",
   "artistDescription": "ISAAK embarked on his musical journey as a street musician at the age of 12.",
   "songName": "Always On The Run",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=8b5gcgXcWgk"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=8b5gcgXcWgk",
+  "score": 0
 }

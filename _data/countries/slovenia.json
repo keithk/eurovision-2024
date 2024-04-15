@@ -1,10 +1,12 @@
 {
   "country": "Slovenia",
   "countryCode": "SLOVENIA",
+  "countryFlag": "🇸🇮",
   "url": "https://eurovision.tv/participant/raiven-2024",
   "artistName": "Raiven",
   "artistImage": "https://eurovision.tv/sites/default/files/styles/teaser/public/media/image/2024-04/01713778-0e3f-4487-a839-7eeb5d5e505d.jpg?itok=mFukHWmR",
   "artistDescription": "Described as a ‘musical alchemist’, Raiven thrives as a mezzo-soprano singer, author, songwriter and harpist.",
   "songName": "Veronika",
-  "songEmbedUrl": "https://www.youtube.com/watch?v=uWcSsi7SliI"
+  "songEmbedUrl": "https://www.youtube.com/watch?v=uWcSsi7SliI",
+  "score": 0
 }

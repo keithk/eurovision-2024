@@ -12,4 +12,4 @@ To run:
 bun run index.ts
 ```
 
-This project was created using `bun init` in bun v1.1.3. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+This project scrapes the information from the Eurovision website into the `/_data/countries` folder. The data is then used to generate the website.
