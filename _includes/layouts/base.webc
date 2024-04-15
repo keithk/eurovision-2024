@@ -33,9 +33,10 @@
     <main @raw="content"></main>
 
     <footer>
-      ©<span webc:nokeep @text="(new Date()).getFullYear()"></span> Built with
+      © <span webc:nokeep @text="(new Date()).getFullYear()"></span> Built by
+      <a href="https://keith.is">keith kurson</a> with
       <a href="https://www.11ty.dev/">Eleventy</a>.
-      <a href="https://github.com/11ty/eleventy-base-webc"
+      <a href="https://github.com/keithk/eurovision-2024"
         >Source code on GitHub</a
       >.
     </footer>
