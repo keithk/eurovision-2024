@@ -6,17 +6,19 @@
 
 <style webc:scoped>
   :host {
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
     width: 100%;
+    border-radius: var(--radius-2);
   }
 
   .header {
     display: flex;
     align-items: center;
     gap: var(--size-2);
-    padding: var(--size-1);
+    padding: var(--size-2) var(--size-4);
+    background: var(--gradient-11);
+    border-radius: var(--radius-2) var(--radius-2) 0 0;
   }
 
   .header span {
@@ -33,6 +35,7 @@
     background-image: var(--bg);
     background-size: cover;
     padding: var(--size-3);
+    border-radius: 0 0 var(--radius-2) var(--radius-2);
   }
 
   .overlay {
