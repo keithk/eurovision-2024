@@ -35,5 +35,6 @@
   </header>
   <h3 @text="country.artistName"></h3>
   <p @text="country.artistDescription"></p>
+  <country-score :score="country.score"></country-score>
   <youtube-video controls :src="country.songEmbedUrl"></youtube-video>
 </div>

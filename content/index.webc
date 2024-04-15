@@ -17,6 +17,6 @@
 
 <ul>
   <li webc:for="(index, country) in countries">
-    <home-country :code="index"></home-country>
+    <home-country @code="index"></home-country>
   </li>
 </ul>
