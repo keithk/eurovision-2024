@@ -13,6 +13,14 @@
       webc:keep
     ></script>
 
+    <script
+      defer
+      src="https://keith-is-umami.dzfvci.easypanel.host/script.js"
+      data-website-id="928c1d1d-3d29-488d-8300-2a5fdddcb3aa"
+      webc:keep
+      webc:if="metadata.tracking"
+    ></script>
+
     <link rel="stylesheet" webc:keep href="https://unpkg.com/open-props" />
 
     <!-- optional imports that use the props -->
