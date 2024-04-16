@@ -8,11 +8,46 @@ layout: layouts/base.webc
 </script>
 
 <style webc:scoped>
-  /* Add your styles for the country details page */
+  .back-button {
+    position: absolute;
+    top: var(--size-4);
+    left: var(--size-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .back-button svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+
+  .country-details {
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    padding: var(--size-4);
+    border-radius: var(--radius-2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 </style>
 
-<div webc:root>
+<div :id="country.countryCode" class="country-details">
   <section :style="backgroundImageStyle(country.artistImage)">
+    <a class="back-button" @click="navigateBack">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+        />
+      </svg>
+    </a>
     <div class="overlay"></div>
     <div class="content">
       <div

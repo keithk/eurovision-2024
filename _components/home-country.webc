@@ -36,7 +36,7 @@
     position: relative;
     z-index: 2;
     padding: var(--size-2) var(--size-4);
-    color: var(--pink-10);
+    color: var(--pink-12);
     border: none;
     border-radius: var(--radius-2);
     cursor: pointer;

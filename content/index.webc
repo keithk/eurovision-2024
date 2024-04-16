@@ -21,17 +21,60 @@
       fetch(href)
         .then((response) => response.text())
         .then((html) => {
-          countryBox.innerHTML = html;
+          countryBox.innerHTML += html;
           countryBox.classList.add("country-details");
           countryBox.style.setProperty("--country-code", countryCode);
         });
     });
   }
 
-  // Attach the navigateToCountryDetails function to the click event of the "Watch Video" links
   document.addEventListener("click", (event) => {
     if (event.target.matches(".show-video-link")) {
       navigateToCountryDetails(event);
+    }
+  });
+
+  function navigateBack(event) {
+    event.preventDefault();
+
+    if (!document.startViewTransition) {
+      // Fallback for browsers that don't support View Transitions
+      window.history.back();
+      return;
+    }
+
+    const countryDetails = event.target.closest(".country-details");
+    const countryCode = countryDetails.id;
+
+    document.startViewTransition(() => {
+      // Navigate back to the index page
+      window.history.back();
+
+      // Remove the country details class and styles
+      countryDetails.classList.remove("country-details");
+      countryDetails.style.removeProperty("--country-code");
+
+      // Hide the country details
+      countryDetails.style.display = "none";
+
+      // Wait for the next animation frame before scrolling
+      requestAnimationFrame(() => {
+        // Scroll to the original position of the country box
+        console.log(countryCode);
+        const countryBox = document.getElementById(countryCode);
+        countryBox.scrollIntoView({ behavior: "smooth" });
+
+        // Wait for the scroll animation to finish before showing the country box
+        setTimeout(() => {
+          countryDetails.style.display = "";
+        }, 500);
+      });
+    });
+  }
+
+  document.addEventListener("click", (event) => {
+    if (event.target.closest(".back-button")) {
+      navigateBack(event);
     }
   });
 </script>
@@ -60,17 +103,6 @@
     width: 100%;
     height: 100%;
     z-index: 9999;
-  }
-
-  .country-details {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background-color: white;
-    overflow-y: auto;
   }
 </style>
 
