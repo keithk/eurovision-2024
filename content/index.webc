@@ -1,5 +1,39 @@
-<script webc:setup>
-  // console.log(countries);
+<script webc:setup></script>
+
+<script>
+  function navigateToCountryDetails(event) {
+    event.preventDefault();
+    const countryBox = event.target.closest(".country-box");
+    const countryCode = countryBox.id;
+    const href = `/country/${countryCode}/index.html`;
+
+    if (!document.startViewTransition) {
+      // Fallback for browsers that don't support View Transitions
+      window.location.href = href;
+      return;
+    }
+
+    document.startViewTransition(() => {
+      // Navigate to the country details page
+      window.history.pushState({}, "", href);
+
+      // Replace the content of the country box with the country details
+      fetch(href)
+        .then((response) => response.text())
+        .then((html) => {
+          countryBox.innerHTML = html;
+          countryBox.classList.add("country-details");
+          countryBox.style.setProperty("--country-code", countryCode);
+        });
+    });
+  }
+
+  // Attach the navigateToCountryDetails function to the click event of the "Watch Video" links
+  document.addEventListener("click", (event) => {
+    if (event.target.matches(".show-video-link")) {
+      navigateToCountryDetails(event);
+    }
+  });
 </script>
 
 <style webc:scoped>
@@ -8,9 +42,40 @@
     flex-direction: column;
     gap: var(--size-2);
   }
+
+  .country-box {
+    view-transition-name: var(--country-code);
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
+
+  ::view-transition-new(root) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+  }
+
+  .country-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: white;
+    overflow-y: auto;
+  }
 </style>
 
 <div>
+  <top-countries></top-countries>
   <div webc:for="(index, country) in countries">
     <home-country @code="index"></home-country>
   </div>

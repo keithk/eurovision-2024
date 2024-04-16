@@ -1,4 +1,5 @@
 <script webc:setup>
+  let showSong = false;
   let artist, song;
   const country = countries[code];
   const backgroundImageStyle = (image) => `--bg: url('${image}')`;
@@ -31,6 +32,22 @@
     z-index: 2;
   }
 
+  .show-video-link {
+    position: relative;
+    z-index: 2;
+    padding: var(--size-2) var(--size-4);
+    color: var(--pink-10);
+    border: none;
+    border-radius: var(--radius-2);
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: var(--size-4);
+  }
+
+  .video-container {
+    display: none;
+  }
+
   section {
     position: relative;
     background-image: var(--bg);
@@ -53,6 +70,7 @@
     position: relative;
     z-index: 2;
     display: flex;
+    flex-wrap: wrap;
     gap: var(--size-4);
   }
 
@@ -63,9 +81,18 @@
     background-image: var(--bg);
     background-size: cover;
   }
+
+  .show-video {
+    width: 100%;
+  }
 </style>
 
-<div webc:root>
+<div
+  webc:root
+  :id="country.countryCode"
+  :view-transition-name="country.countryCode"
+  class="country-box"
+>
   <div class="header">
     <span @text="country.countryFlag"></span>
     <h2 @text="country.country"></h2>
@@ -82,7 +109,11 @@
         <h3 @text="country.artistName"></h3>
         <p @text="country.artistDescription"></p>
       </div>
+      <div class="show-video">
+        <a class="show-video-link" @click="navigateToCountryDetails"
+          >Watch Video
+        </a>
+      </div>
     </div>
-    <youtube-video controls :src="country.songEmbedUrl"></youtube-video>
   </section>
 </div>

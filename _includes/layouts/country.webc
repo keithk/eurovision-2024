@@ -1,0 +1,29 @@
+---
+layout: layouts/base.webc
+---
+
+<script webc:setup>
+  const country = countries[code];
+  const backgroundImageStyle = (image) => `--bg: url('${image}')`;
+</script>
+
+<style webc:scoped>
+  /* Add your styles for the country details page */
+</style>
+
+<div webc:root>
+  <section :style="backgroundImageStyle(country.artistImage)">
+    <div class="overlay"></div>
+    <div class="content">
+      <div
+        class="avatar"
+        :style="backgroundImageStyle(country.artistImage)"
+      ></div>
+      <div>
+        <h3 @text="country.artistName"></h3>
+        <p @text="country.artistDescription"></p>
+      </div>
+    </div>
+    <youtube-video controls :src="country.songEmbedUrl"></youtube-video>
+  </section>
+</div>

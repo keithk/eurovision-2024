@@ -1,0 +1,36 @@
+<script webc:setup>
+  const countriesArray = Object.values(countries);
+  const topCountries = countriesArray
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+</script>
+
+<style webc:scoped>
+  :host {
+    display: flex;
+    justify-content: space-around;
+    gap: var(--size-4);
+  }
+  .top-country {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid gold;
+    border-radius: var(--radius-2);
+    padding: var(--size-2);
+  }
+  .top-country img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+</style>
+
+<div webc:root>
+  <div class="top-country" webc:for="(index, country) in topCountries">
+    <img :src="country.artistImage" :alt="country.artistName" />
+    <h3 @text="country.country"></h3>
+    <country-score :score="country.score"></country-score>
+  </div>
+</div>

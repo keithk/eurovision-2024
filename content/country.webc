@@ -1,0 +1,15 @@
+---node
+const layout = 'layouts/country.webc';
+
+function permalink(data) {
+	return `/country/${data.country.country}/index.html`;
+}
+
+const pagination = {
+  size: 1,
+  data: "countries",
+  alias: "country",
+  resolve: "values",
+  reverse: true
+}
+---
