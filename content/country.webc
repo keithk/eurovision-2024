@@ -2,8 +2,7 @@
 const layout = 'layouts/country.webc';
 
 function permalink(data) {
-	const lowerCase = data.country.country.toLowerCase();
-	return `/country/${lowerCase}/index.html`;
+	return `/country/${data.country.countryCode}/index.html`;
 }
 
 const pagination = {
