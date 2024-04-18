@@ -57,6 +57,16 @@
       // Hide the country details
       countryDetails.style.display = "none";
 
+      // Remove any div with the class country-details
+      const additionalCountryDetails =
+        document.querySelector(".country-details");
+      if (additionalCountryDetails) {
+        additionalCountryDetails.remove();
+      }
+
+      // Push history state back to /index.html
+      // window.history.pushState({}, "", "/index.html");
+
       // Wait for the next animation frame before scrolling
       requestAnimationFrame(() => {
         // Scroll to the original position of the country box
