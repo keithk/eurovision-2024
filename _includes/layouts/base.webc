@@ -6,7 +6,7 @@
     <title @text="title || metadata.title"></title>
     <meta
       name="description"
-      :content="Small microsite displaying this years eurovision entries."
+      content="Small microsite displaying this years eurovision entries."
     />
     <meta name="generator" :content="eleventy.generator" />
     <link rel="stylesheet" href="css/base.css" />

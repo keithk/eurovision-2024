@@ -19,11 +19,24 @@
     flex-shrink: 1;
   }
 
-  #intro {
-    padding: var(--size-4) 0;
-  }
+  #intro,
   #footer {
     padding: var(--size-4) 0;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack sections vertically */
+    }
+
+    #countries {
+      width: 100%; /* Full width on mobile */
+    }
+
+    #top {
+      order: -1; /* Bring top countries above the list of countries */
+    }
   }
 </style>
 
