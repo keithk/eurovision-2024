@@ -2,21 +2,22 @@
   const countriesArray = Object.values(countries);
   const topCountries = countriesArray
     .sort((a, b) => b.score - a.score)
-    .slice(0, 3);
+    .slice(0, 5);
 </script>
 
 <style webc:scoped>
   :host {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     gap: var(--size-4);
   }
+
   .top-country {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 4px solid gold;
     border-radius: var(--radius-2);
+    background: var(--gradient-19);
     padding: var(--size-2);
   }
   .top-country img {

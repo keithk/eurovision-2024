@@ -1,124 +1,48 @@
 <script webc:setup></script>
 
-<script>
-  function navigateToCountryDetails(event) {
-    event.preventDefault();
-    const countryBox = event.target.closest(".country-box");
-    const countryCode = countryBox.id;
-    const href = `/country/${countryCode}/index.html`;
-
-    if (!document.startViewTransition) {
-      // Fallback for browsers that don't support View Transitions
-      window.location.href = href;
-      return;
-    }
-
-    document.startViewTransition(() => {
-      // Navigate to the country details page
-      window.history.pushState({}, "", href);
-
-      // Replace the content of the country box with the country details
-      fetch(href)
-        .then((response) => response.text())
-        .then((html) => {
-          countryBox.innerHTML += html;
-          countryBox.classList.add("country-details");
-          countryBox.style.setProperty("--country-code", countryCode);
-        });
-    });
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--size-2);
   }
 
-  document.addEventListener("click", (event) => {
-    if (event.target.matches(".show-video-link")) {
-      navigateToCountryDetails(event);
-    }
-  });
-
-  function navigateBack(event) {
-    event.preventDefault();
-
-    if (!document.startViewTransition) {
-      // Fallback for browsers that don't support View Transitions
-      window.history.back();
-      return;
-    }
-
-    const countryDetails = event.target.closest(".country-details");
-    const countryCode = countryDetails.id;
-
-    document.startViewTransition(() => {
-      // Navigate back to the index page
-      window.history.back();
-
-      // Remove the country details class and styles
-      countryDetails.classList.remove("country-details");
-      countryDetails.style.removeProperty("--country-code");
-
-      // Hide the country details
-      countryDetails.style.display = "none";
-
-      // Remove any div with the class country-details
-      const additionalCountryDetails =
-        document.querySelector(".country-details");
-      if (additionalCountryDetails) {
-        additionalCountryDetails.remove();
-      }
-
-      // Push history state back to /index.html
-      // window.history.pushState({}, "", "/index.html");
-
-      // Wait for the next animation frame before scrolling
-      requestAnimationFrame(() => {
-        // Scroll to the original position of the country box
-        console.log(countryCode);
-        const countryBox = document.getElementById(countryCode);
-        countryBox.scrollIntoView({ behavior: "smooth" });
-
-        // Wait for the scroll animation to finish before showing the country box
-        setTimeout(() => {
-          countryDetails.style.display = "";
-        }, 500);
-      });
-    });
-  }
-
-  document.addEventListener("click", (event) => {
-    if (event.target.closest(".back-button")) {
-      navigateBack(event);
-    }
-  });
-</script>
-
-<style webc:scoped>
-  :host {
+  .container section {
     display: flex;
     flex-direction: column;
     gap: var(--size-2);
   }
 
-  .country-box {
-    view-transition-name: var(--country-code);
+  #countries {
+    width: 75%;
+    flex-shrink: 1;
   }
 
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;
+  #intro {
+    padding: var(--size-4) 0;
   }
-
-  ::view-transition-new(root) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
+  #footer {
+    padding: var(--size-4) 0;
   }
 </style>
 
-<div>
-  <top-countries></top-countries>
-  <div webc:for="(index, country) in countries">
-    <home-country @code="index"></home-country>
-  </div>
+<section id="intro">
+  Hi, I'm <a href="https://keith.is">Keith</a> and I love Eurovision. Here are
+  all of the countries in this year's contest and my top five favorites.
+</section>
+<div class="container">
+  <section id="countries">
+    <div webc:for="(index, country) in countries">
+      <home-country @code="index"></home-country>
+    </div>
+  </section>
+  <section id="top">
+    <top-countries></top-countries>
+  </section>
 </div>
+
+<section id="footer">
+  built with 💞 by <a href="https://keith.is">keith</a>. find on
+  <a href="https://github.com/keithk/eurovision-2024">github</a>
+</section>

@@ -3,6 +3,9 @@
   let artist, song;
   const country = countries[code];
   const backgroundImageStyle = (image) => `--bg: url('${image}')`;
+  const playSong = () => {
+    console.log("play song");
+  };
 </script>
 
 <style webc:scoped>
@@ -18,18 +21,12 @@
     align-items: center;
     gap: var(--size-2);
     padding: var(--size-2) var(--size-4);
-    background: var(--gradient-11);
+    background: var(--gradient-9);
     border-radius: var(--radius-2) var(--radius-2) 0 0;
   }
 
   .header span {
     font-size: var(--font-size-6);
-  }
-
-  youtube-video {
-    width: 100%;
-    height: 300px;
-    z-index: 2;
   }
 
   .show-video-link {
@@ -74,6 +71,11 @@
     gap: var(--size-4);
   }
 
+  .meta {
+    display: flex;
+    gap: var(--size-4);
+  }
+
   .avatar {
     border-radius: var(--radius-blob-4);
     width: var(--size-12);
@@ -87,12 +89,31 @@
   }
 </style>
 
-<div
-  webc:root
-  :id="country.countryCode"
-  :view-transition-name="country.countryCode"
-  class="country-box"
->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Add event listener to the entire document but filter for buttons within `.country-box`
+    document.body.addEventListener("click", (event) => {
+      const button = event.target.closest(".country-box .video-toggle"); // Ensures that clicks on child elements also work
+      if (button) {
+        const iframe = button.nextElementSibling; // Assuming the iframe immediately follows the button
+
+        if (button.textContent.includes("Watch Youtube Video")) {
+          const videoWatchUrl = button.getAttribute("data-youtube");
+          const videoEmbedUrl = videoWatchUrl.replace("watch?v=", "embed/");
+          iframe.src = videoEmbedUrl;
+          iframe.style.display = "block";
+          button.textContent = "Close";
+        } else {
+          iframe.src = "";
+          iframe.style.display = "none";
+          button.textContent = "Watch Youtube Video";
+        }
+      }
+    });
+  });
+</script>
+
+<div class="country-box" data-country-code="country.countryCode">
   <div class="header">
     <span @text="country.countryFlag"></span>
     <h2 @text="country.country"></h2>
@@ -101,18 +122,31 @@
   <section :style="backgroundImageStyle(country.artistImage)">
     <div class="overlay"></div>
     <div class="content">
-      <div
-        class="avatar"
-        :style="backgroundImageStyle(country.artistImage)"
-      ></div>
-      <div>
-        <h3 @text="country.artistName"></h3>
-        <p @text="country.artistDescription"></p>
+      <div class="meta">
+        <div
+          class="avatar"
+          :style="backgroundImageStyle(country.artistImage)"
+        ></div>
+        <div>
+          <h3 @text="country.artistName"></h3>
+          <p @text="country.artistDescription"></p>
+        </div>
       </div>
       <div class="show-video">
-        <a class="show-video-link" @click="navigateToCountryDetails"
-          >Watch Video
-        </a>
+        <button class="video-toggle" :data-youtube="country.songEmbedUrl">
+          Watch Youtube Video
+        </button>
+        <iframe
+          class="youtube-iframe"
+          width="853"
+          height="480"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="display: none"
+        ></iframe>
       </div>
     </div>
   </section>

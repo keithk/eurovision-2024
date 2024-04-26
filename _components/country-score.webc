@@ -13,7 +13,7 @@
     font-family: star-rating;
     display: flex;
     gap: var(--size-1);
-    color: var(--pink-2);
+    color: var(--pink-7);
   }
 </style>
 <script webc:setup>
